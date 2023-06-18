@@ -14,37 +14,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
         }
-        body{
+
+        body {
             background: #1d232b;
             overflow-x: hidden;
         }
 
         /* Start Sidebar CSS */
 
-        .sidebar{
+        .sidebar {
             position: fixed;
             top: 0;
             left: 0;
             height: 100vh;
             width: 100px;
-            background-color: #12171e; 
+            background-color: #12171e;
             transform: all 0.5s ease;
 
         }
-        .logo{
-           
+
+        .logo {
+
             width: 60px;
             height: auto;
             margin: 20px 10px 0 10px;
         }
-        .logo-title{
+
+        .logo-title {
             font-weight: 700;
             font-size: 17px;
             color: #23832f;
@@ -53,7 +56,9 @@
             margin-bottom: 0;
             cursor: default;
         }
-        .sidebar ul, .sidebar ul li{
+
+        .sidebar ul,
+        .sidebar ul li {
             list-style-type: none;
             height: 50px;
             font-size: 27px;
@@ -62,97 +67,112 @@
             align-items: left;
             flex-direction: column;
         }
-        .sidebar ul{
+
+        .sidebar ul {
             margin-top: 4rem;
         }
-        .menu-link{
+
+        .menu-link {
             color: #23832f;
         }
-        .menu-link:hover{
-            color:#41ed58;
+
+        .menu-link:hover {
+            color: #41ed58;
         }
-        .menu-link.active{
-            color:#41ed58;
+
+        .menu-link.active {
+            color: #41ed58;
         }
-        .logout{
+
+        .logout {
             position: absolute;
             bottom: 0;
             margin-bottom: 10px;
         }
+
         /* End Sidebar CSS */
 
         /* Start Content Admin CSS */
-        #content{
+        #content {
             width: 93%;
             height: auto;
             margin-left: 100px;
-            color: aliceblue;  
+            color: aliceblue;
         }
-        .top-pesan{
+
+        .top-pesan {
             background: #1d232b;
             width: 93%;
             position: fixed;
             top: 0;
         }
-        .top-pesan p{
-          background: #12171e;
-          padding: 8px;
-          text-align: center;
-          margin: 1rem 2rem 1rem 2rem;
-          border-radius: 10px;
-          height: 50px;
-          font-weight: 600;
-          font-size: 1.3rem;
-          display: block;
+
+        .top-pesan p {
+            background: #12171e;
+            padding: 8px;
+            text-align: center;
+            margin: 1rem 2rem 1rem 2rem;
+            border-radius: 10px;
+            height: 50px;
+            font-weight: 600;
+            font-size: 1.3rem;
+            display: block;
         }
-        .table-pesan{
-          text-align: center;
-          width: 95.5%;
-          height: 63vh;
-          overflow-x: hidden;
-          overflow-y: auto;
-          background: #12171e;
-          display: flex;
-          margin: -25px 0 0 2rem;
-          border-radius: 15px;
-          padding: 15px;
+
+        .table-pesan {
+            text-align: center;
+            width: 95.5%;
+            height: 63vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #12171e;
+            display: flex;
+            margin: -25px 0 0 2rem;
+            border-radius: 15px;
+            padding: 15px;
         }
-        .table-MenuTable{
-          text-align: center;
-          width: 95.5%;
-          height: auto;
-          background: #12171e;
-          display: flex;
-          margin: 10rem 0 0 2rem;
-          border-radius: 15px;
-          padding: 15px;
+
+        .table-MenuTable {
+            text-align: center;
+            width: 95.5%;
+            height: auto;
+            background: #12171e;
+            display: flex;
+            margin: 10rem 0 0 2rem;
+            border-radius: 15px;
+            padding: 15px;
         }
-        .table tr, .table td{
+
+        .table tr,
+        .table td {
             color: white;
         }
-        .add-btn{
-          background: #1d232b;
-          width: 93%;
-          position: fixed;
-          top: 10%;
+
+        .add-btn {
+            background: #1d232b;
+            width: 93%;
+            position: fixed;
+            top: 10%;
         }
-        .btn-add{
-          display: flex;
-          float: right;
-          border: 2px solid white;
-          border-radius: 5px;
-          background: #12171e;
-          padding: 8px;
-          text-decoration: none;
-          color: white;
-          font-size: 15px;
-          font-weight: bolder;
-          margin: 1rem 2rem 1rem 1rem;
+
+        .btn-add {
+            display: flex;
+            float: right;
+            border: 2px solid white;
+            border-radius: 5px;
+            background: #12171e;
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bolder;
+            margin: 1rem 2rem 1rem 1rem;
         }
-        .btn-add:hover{
-          color: #23832f;
-          border: 2px solid #23832f;
-          transition: all ease-in 0.2s;
+
+        .btn-add:hover {
+            color: #23832f;
+            border: 2px solid #23832f;
+            transition: all ease-in 0.2s;
         }
 
         /* End Content CSS */
@@ -175,7 +195,7 @@
                 </a>
             </li>
             <li>
-                <a href="/menu" class="side-link">
+                <a href="/menuadmin" class="side-link">
                     <i class='bx bx-food-menu menu-link' data-bs-toggle="tooltip" data-bs-placement="right" title="Menu"></i>
                 </a>
             </li>
