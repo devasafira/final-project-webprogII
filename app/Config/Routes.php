@@ -34,23 +34,38 @@ $routes->get('/', 'Auth::login');
 //custom
 
 // Auth
+$routes->get('/', 'Auth::login');
+
+//custom
+
+// Auth
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::login');
+$routes->get('/logout', 'Auth::logout');
 
 $routes->get('/register', 'Auth::register');
 $routes->post('/register', 'Auth::register');
 
 // Admin
-$routes->get('/pesan', 'Home::index');
-$routes->get('/menu', 'Home::menu');
+$routes->get('/pesan', 'MenuAdmin::pesanan');
+//$routes->get('/menu', 'Home::menu');
 $routes->get('/riwayatpembelian', 'Home::riwayatPembelian');
-$routes->get('/table', 'Home::table');
-$routes->get('/addMenu', 'Home::addMenu');
+$routes->get('/user', 'User::menu');
+$routes->get('home', 'User::menu');
+//$routes->get('/addMenu', 'Home::addMenu');
 $routes->get('/addTable', 'Home::addTable');
 
 // User
 $routes->get('/home', 'Home::halamanUser');
-$routes->get('/pembayaran', 'Home::bayarUser');
+$routes->get('/bayar', 'Home::bayarUser');
+$routes->get('/menuadmin', 'MenuAdmin::dashboard');
+$routes->get('/addMenu', 'MenuAdmin::addMenu');
+$routes->post('/saveMenu', 'MenuAdmin::saveMenu');
+$routes->get('/table', 'Home::table');
+$routes->get('/deleteMenu/(:num)', 'MenuAdmin::deleteMenu/$1');
+$routes->get('/editMenu/(:num)', 'MenuAdmin::editMenu/$1');
+$routes->post('/updateMenu/(:num)', 'MenuAdmin::updateMenu/$1');
+
 
 
 /*
