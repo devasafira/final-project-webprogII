@@ -210,7 +210,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="logout">
+                <a href="/logout" class="logout">
                     <i class='bx bx-log-out menu-link' data-bs-toggle="tooltip" data-bs-placement="right" title="Logout"></i>
                 </a>
             </li>

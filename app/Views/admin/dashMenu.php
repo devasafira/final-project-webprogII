@@ -10,7 +10,6 @@
         </div>
         <div class="add-btn">
             <a href="/addMenu" class="btn-add">
-                <!-- <i class='bx bx-add-to-queue'> <p>Add New Menu</p></i> -->
                 Add New Menu
             </a>
         </div>
@@ -30,7 +29,7 @@
                         <tr>
                             <td>
                                 <?php if (!empty($menu['gambar'])) : ?>
-                                    <?= basename($menu['gambar']); ?>
+                                    <img src="/public/uploads/<?= $menu['gambar']; ?>" alt="<?= basename($menu['gambar']); ?>" width="50" height="50">
                                 <?php endif; ?>
                             </td>
                             <td><?= $menu['nama_produk']; ?></td>
@@ -38,7 +37,7 @@
                             <td><?= $menu['kategori']; ?></td>
                             <td>
                                 <!-- Tambahkan aksi untuk setiap data menu -->
-                                <a href="/editMenu/<?= $menu['id']; ?>" class="btn-edit">Edit</a>
+                                <a href="/editMenu<?= $menu['id']; ?>" class="btn-edit">Edit</a>
                                 <a href="/deleteMenu/<?= $menu['id']; ?>" class="btn-delete">Delete</a>
                             </td>
                         </tr>

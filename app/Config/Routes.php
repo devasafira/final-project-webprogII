@@ -57,14 +57,14 @@ $routes->get('/addTable', 'Home::addTable');
 
 // User
 $routes->get('/home', 'Home::halamanUser');
-$routes->get('/bayar', 'Home::bayarUser');
+$routes->get('/pembayaran', 'Home::bayarUser');
 $routes->get('/menuadmin', 'MenuAdmin::dashboard');
 $routes->get('/addMenu', 'MenuAdmin::addMenu');
 $routes->post('/saveMenu', 'MenuAdmin::saveMenu');
 $routes->get('/table', 'Home::table');
 $routes->get('/deleteMenu/(:num)', 'MenuAdmin::deleteMenu/$1');
-$routes->get('/editMenu/(:num)', 'MenuAdmin::editMenu/$1');
-$routes->post('/updateMenu/(:num)', 'MenuAdmin::updateMenu/$1');
+$routes->add('editMenu(:num)', 'MenuAdmin::editMenu/$1');
+$routes->post('/updateMenu(:num)', 'MenuAdmin::updateMenu/$1');
 
 
 

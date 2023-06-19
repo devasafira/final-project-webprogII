@@ -5,11 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-
+    <title>Uboard - User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Tambahkan gaya khusus sesuai kebutuhan Anda */
+        body {
+            background: #1d232b;
+        }
+
         #userHomeDashboard {
             margin-left: 100px;
             color: white;
@@ -46,297 +49,161 @@
     </style>
 </head>
 
-<body style="background: #1d232b;">
-
-    <div id="userHomeDashboard" style="margin-left: 100px; color:white;">
+<body>
+    <div id="userHomeDashboard">
         <div class="top-userhome">
             <nav>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sushi</a>
+                        <a class="nav-link" href="#sushi">Sushi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sashimi</a>
+                        <a class="nav-link" href="#sashimi">Sashimi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chinmi</a>
+                        <a class="nav-link" href="#chinmi">Chinmi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Udon</a>
+                        <a class="nav-link" href="#udon">Udon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Drinks</a>
+                        <a class="nav-link" href="#drinks">Drinks</a>
                     </li>
-                    <ul>
+                </ul>
             </nav>
         </div>
 
-        <section id="sushi" class="menu-section">
-            <div class="container">
-                <div class="title-box">
-                    <h4>Sushi</h4>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://ik.imagekit.io/jq1luxum6oz/https://s3-ap-southeast-1.amazonaws.com/v3-live.image.oddle.me/product/HalfCurryUdon8a7411.jpg?tr=w-500,h-500" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+        <?php if (empty($sushiMenus) && empty($sashimiMenus) && empty($chinmiMenus) && empty($udonMenus) && empty($drinksMenus)) : ?>
+            <p>Tidak ada menu yang tersedia.</p>
+        <?php else : ?>
+            <?php if (!empty($sushiMenus)) : ?>
+                <section id="sushi" class="menu-section">
+                    <div class="container">
+                        <div class="title-box">
+                            <h4>Sushi</h4>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+                        <div class="row">
+                            <?php foreach ($sushiMenus as $menu) : ?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                            <a href="#" class="btn btn-success">Pesan</a>
+                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+                </section>
+            <?php endif; ?>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+            <?php if (!empty($sashimiMenus)) : ?>
+                <section id="sashimi" class="menu-section">
+                    <div class="container">
+                        <div class="title-box">
+                            <h4>Sashimi</h4>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+                        <div class="row">
+                            <?php foreach ($sashimiMenus as $menu) : ?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                            <a href="#" class="btn btn-success">Pesan</a>
+                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+            <?php endif; ?>
 
-        <section id="Sashimi" class="menu-section">
-            <div class="container">
-                <div class="title-box">
-                    <h4>Sashimi</h4>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+            <?php if (!empty($chinmiMenus)) : ?>
+                <section id="chinmi" class="menu-section">
+                    <div class="container">
+                        <div class="title-box">
+                            <h4>Chinmi</h4>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+                        <div class="row">
+                            <?php foreach ($chinmiMenus as $menu) : ?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                            <a href="#" class="btn btn-success">Pesan</a>
+                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+                </section>
+            <?php endif; ?>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+            <?php if (!empty($udonMenus)) : ?>
+                <section id="udon" class="menu-section">
+                    <div class="container">
+                        <div class="title-box">
+                            <h4>Udon</h4>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+                        <div class="row">
+                            <?php foreach ($udonMenus as $menu) : ?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                            <a href="#" class="btn btn-success">Pesan</a>
+                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+                </section>
+            <?php endif; ?>
 
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+            <?php if (!empty($drinksMenus)) : ?>
+                <section id="drinks" class="menu-section">
+                    <div class="container">
+                        <div class="title-box">
+                            <h4>Drinks</h4>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
+                        <div class="row">
+                            <?php foreach ($drinksMenus as $menu) : ?>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                            <a href="#" class="btn btn-success">Pesan</a>
+                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="chinmi" class="menu-section">
-            <div class="container">
-                <div class="title-box">
-                    <h4>Chinmi</h4>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="udon" class="menu-section">
-            <div class="container">
-                <div class="title-box">
-                    <h4>Udon</h4>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-success">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
+                </section>
+            <?php endif; ?>
+        <?php endif; ?>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 <?= $this->endSection('user-content'); ?>
