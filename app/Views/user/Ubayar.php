@@ -21,14 +21,16 @@
           <tr>
             <th>Gambar</th>
             <th>Nama</th>
-            <th>Harga dan Jumlah</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>#</td>
             <td>Doe</td>
-            <td>30000 x 2</td>
+            <td>30000</td> 
+            <td>2</td>
           </tr>
         </tbody>
       </table>

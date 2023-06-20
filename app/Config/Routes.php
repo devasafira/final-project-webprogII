@@ -61,11 +61,21 @@ $routes->get('/pembayaran', 'Home::bayarUser');
 $routes->get('/menuadmin', 'MenuAdmin::dashboard');
 $routes->get('/addMenu', 'MenuAdmin::addMenu');
 $routes->post('/saveMenu', 'MenuAdmin::saveMenu');
-$routes->get('/table', 'Home::table');
+//$routes->get('/table', 'Home::table');
 $routes->get('/deleteMenu/(:num)', 'MenuAdmin::deleteMenu/$1');
 $routes->add('editMenu(:num)', 'MenuAdmin::editMenu/$1');
 $routes->post('/updateMenu(:num)', 'MenuAdmin::updateMenu/$1');
+$routes->get('/awal', 'Home::table');
 
+$routes->get('/table', 'AdminController::manageTables');
+$routes->post('/addtable', 'AdminController::addTable');
+$routes->get('/addtable', 'AdminController::addTable');
+$routes->get('/admin/delete-table/(:num)', 'AdminController::deleteTable/$1');
+$routes->get('/admin/activate-table/(:num)', 'AdminController::activateTable/$1');
+$routes->get('/admin/deactivate-table/(:num)', 'AdminController::deactivateTable/$1');
+
+$routes->get('/pilihmeja', 'User::selectTable');
+$routes->post('/pilihmeja', 'User::placeOrder');
 
 
 /*

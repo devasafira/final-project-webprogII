@@ -1,0 +1,46 @@
+CRITICAL - 2023-06-20 05:13:22 --> Undefined variable $tables
+in APPPATH\Views\user\Pilihmeja.php on line 35.
+ 1 APPPATH\Views\user\Pilihmeja.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tables', 'C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Pilihmeja.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Pilihmeja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Pilihmeja', [], true)
+ 5 APPPATH\Controllers\User.php(29): view('user/Pilihmeja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-20 05:19:46 --> syntax error, unexpected end of file
+in APPPATH\Views\user\Pilihmeja.php on line 58.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Pilihmeja', [], true)
+ 3 APPPATH\Controllers\User.php(36): view('user/Pilihmeja', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-20 05:53:51 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 14.
+ 1 APPPATH\Views\user\Ubayar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-20 05:54:05 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 14.
+ 1 APPPATH\Views\user\Ubayar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\final-project-webprogII\\public\\index.php')
