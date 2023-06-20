@@ -3,16 +3,22 @@
 <?= $this->section('user-content'); ?>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uboard - User Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Tambahkan gaya khusus sesuai kebutuhan Anda */
         body {
             background: #1d232b;
         }
-
+        .menu-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
         #userHomeDashboard {
             margin-left: 100px;
             color: white;
@@ -46,6 +52,48 @@
         .menu-section .card {
             margin: 1.5rem 0 1.5rem 0;
         }
+
+        .quantity {
+            display: flex;
+            align-items: si;
+        }
+
+        .btn-quantity {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            background-color: #6c757d;
+            cursor: pointer;
+        }
+
+        .btn-quantity:hover {
+            background-color: #5a6268;
+        }
+
+        .quantity-input {
+            width: 40px;
+            height: 30px;
+            padding: 0;
+            text-align: center;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            color: #000;
+        }
+
+        .btn-success {
+            margin-top: 10px;
+        }
+
+        .badge {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -73,29 +121,37 @@
             </nav>
         </div>
 
-        <?php if (empty($sushiMenus) && empty($sashimiMenus) && empty($chinmiMenus) && empty($udonMenus) && empty($drinksMenus)) : ?>
-            <p>Tidak ada menu yang tersedia.</p>
-        <?php else : ?>
-            <?php if (!empty($sushiMenus)) : ?>
-                <section id="sushi" class="menu-section">
-                    <div class="container">
-                        <div class="title-box">
-                            <h4>Sushi</h4>
-                        </div>
-                        <div class="row">
-                            <?php foreach ($sushiMenus as $menu) : ?>
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
-                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
-                                            <a href="#" class="btn btn-success">Pesan</a>
-                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
-                                        </div>
+        <?php if (empty($sushiMenus) && empty($sashimiMenus) && empty($chinmiMenus) && empty($udonMenus) && empty($drinkMenus)) : ?>
+            <div class="text-center">
+                <h2>Tidak ada menu yang tersedia</h2>
+            </div>
+        <?php endif; ?>
+
+        <?php if (!empty($sushiMenus)) : ?>
+            <section id="sushi" class="menu-section">
+                <div class="container">
+                    <div class="title-box">
+                        <h2>Sushi</h2>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($sushiMenus as $menu) : ?>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="<?= base_url('uploads/' . $menu['gambar']); ?>" class="card-img-top" alt="Menu Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                        <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                        <a href="#" class="btn btn-success">Pesan</a>
+                                        <span class="quantity">
+                                            <button type="button" class="btn btn-quantity minus-btn" onclick="decrementQuantity(this)"><i class="fas fa-minus"></i></button>
+                                            <input type="number" name="quantity" class="quantity-input" min="0" max="<?= $menu['stok']; ?>" value="0">
+                                            <button type="button" class="btn btn-quantity plus-btn" onclick="incrementQuantity(this)"><i class="fas fa-plus"></i></button>
+                                        </span>
+                                        <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
+                            </div>
+                        <?php endforeach; ?>
                         </div>
                     </div>
                 </section>
@@ -111,7 +167,7 @@
                             <?php foreach ($sashimiMenus as $menu) : ?>
                                 <div class="col">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
                                             <p class="card-text"><?= $menu['keterangan']; ?></p>
@@ -136,7 +192,7 @@
                             <?php foreach ($chinmiMenus as $menu) : ?>
                                 <div class="col">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
                                             <p class="card-text"><?= $menu['keterangan']; ?></p>
@@ -161,7 +217,7 @@
                             <?php foreach ($udonMenus as $menu) : ?>
                                 <div class="col">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
                                             <p class="card-text"><?= $menu['keterangan']; ?></p>
@@ -186,7 +242,7 @@
                             <?php foreach ($drinksMenus as $menu) : ?>
                                 <div class="col">
                                     <div class="card" style="width: 18rem;">
-                                        <img src="<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
                                         <div class="card-body">
                                             <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
                                             <p class="card-text"><?= $menu['keterangan']; ?></p>
@@ -200,10 +256,30 @@
                     </div>
                 </section>
             <?php endif; ?>
-        <?php endif; ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        function incrementQuantity(btn) {
+            var input = btn.parentNode.querySelector('.quantity-input');
+            var currentValue = parseInt(input.value);
+            var maxValue = parseInt(input.max);
+
+            if (currentValue < maxValue) {
+                input.value = currentValue + 1;
+            }
+        }
+
+        function decrementQuantity(btn) {
+            var input = btn.parentNode.querySelector('.quantity-input');
+            var currentValue = parseInt(input.value);
+
+            if (currentValue > 0) {
+                input.value = currentValue - 1;
+            }
+        }
+    </script>
 </body>
 
 <?= $this->endSection('user-content'); ?>

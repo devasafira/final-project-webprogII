@@ -19,7 +19,8 @@
                     <tr>
                         <th scope="col">Gambar</th>
                         <th scope="col">Produk</th>
-                        <th scope="col">Harga</th>
+                        <th scope="col">Harga</th>  
+                        <th scope="col">Stok</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -29,11 +30,12 @@
                         <tr>
                             <td>
                                 <?php if (!empty($menu['gambar'])) : ?>
-                                    <img src="/public/uploads/<?= $menu['gambar']; ?>" alt="<?= basename($menu['gambar']); ?>" width="50" height="50">
+                                    <img src="/uploads/<?= $menu['gambar']; ?>" alt="<?= basename($menu['gambar']); ?>" width="100" height="100">
                                 <?php endif; ?>
                             </td>
                             <td><?= $menu['nama_produk']; ?></td>
                             <td>Rp.<?= $menu['harga']; ?></td>
+                            <td><?= $menu['stok']; ?></td>
                             <td><?= $menu['kategori']; ?></td>
                             <td>
                                 <!-- Tambahkan aksi untuk setiap data menu -->

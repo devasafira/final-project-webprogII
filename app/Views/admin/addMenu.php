@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Menu</title>
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-AshC6B+UKr89OK/2Mdbs70VhzKBfyDcQ8uKTm12O2+zTeKSt/0sy5P2T6P4m+AfJKaLojU9H4GkwOOukzZ55Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body style="background: #12171e; overflow:hidden;">
@@ -41,22 +41,49 @@
                         <option value="Drinks">Drinks</option>
                     </select>
                 </div>
+                <br>
                 <div class="textfield">
                     <label for="stok">Stok</label>
-                    <span></span>
-                    <input type="number" name="stok" id="stok" min="0" required onkeydown="return event.keyCode !== 18;">
-                    <span></span>
+                    <div class="stok-input">
+                        <button type="button" class="stok-btn" onclick="decrementStok()"><i class="fas fa-minus"></i></button>
+                        <input type="number" name="stok" id="stok" min="0" max="999" required>
+                        <button type="button" class="stok-btn" onclick="incrementStok()"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
+                <br>
                 <div class="textfield">
                     <label for="gambar">Gambar Menu :</label>
-                    <input type="file" id="gambar" name="gambar" placeholder="Link Gambar">
-                    <span></span>
+                    <input type="file" id="gambar" name="gambar" accept="image/*">
                 </div>
+                <br>
                 <input type="submit" value="Add">
-                <a class="addmenu-table" href="/menu">back</a>
+                <a class="addmenu-table" href="/menuadmin">back</a>
             </form>
         </div>
     </div>
+
+    <script>
+        function incrementStok() {
+            const stokInput = document.getElementById('stok');
+            const stokValue = parseInt(stokInput.value);
+
+            if (!isNaN(stokValue)) {
+                stokInput.value = stokValue + 1;
+            } else {
+                stokInput.value = 1;
+            }
+        }
+
+
+        function decrementStok() {
+            const stokInput = document.getElementById('stok');
+            const stokValue = parseInt(stokInput.value);
+
+            if (!isNaN(stokValue) && stokValue > 0) {
+                stokInput.value = stokValue - 1;
+            }
+        }
+    </script>
 </body>
 
 </html>
