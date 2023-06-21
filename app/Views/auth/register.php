@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
@@ -13,24 +12,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-
 <body style="background-image: linear-gradient(315deg, #80ff72 0%, #529e49 74%); overflow:hidden;">
-
+    
     <div class="box">
         <div class="center">
             <h1>Register</h1>
 
-            <?php if (session()->has('errors')) : ?>
-                <ul>
-                    <?php foreach (session('errors') as $error) : ?>
-                        <li><?= $error ?></li>
-                    <?php endforeach; ?>
-                </ul>
+            <?php if (session()->has('success')) : ?>
+                <p><?= session('success')?></p>
             <?php endif; ?>
 
-            <?php if (session()->has('success')) : ?>
-                <p><?= session('success') ?></p>
+            <?php if (session()->has('errors')) : ?>
+                <?php foreach (session('errors') as $error) : ?>
+                <p><?= $error ?></p>
+                <?php endforeach; ?>
             <?php endif; ?>
+            
             <form action="/register" method="post">
                 <div class="text-field">
                     <input type="text" name="username" id="" required>
@@ -63,5 +60,4 @@
         </div>
     </div>
 </body>
-
 </html>
