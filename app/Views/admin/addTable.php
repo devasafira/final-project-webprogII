@@ -20,15 +20,12 @@
     <div class="box">
         <div class="center" style="background: #12171b;">
             <h1>Add Table</h1>
-
             <form action="/addtable" method="post">
-
                 <div class="text-field">
                     <input type="text" name="table_number" id="table_number" required style="color: white;">
                     <span class="span1"></span>
                     <label for="table_number">Table Name</label>
                 </div>
-
                 <input type="submit" value="Add">
                 <a class="addmenu-table" href="/table">Back</a>
             </form>

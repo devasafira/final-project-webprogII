@@ -14,14 +14,12 @@
 </head>
 <body style="background-image: linear-gradient(315deg, #80ff72 0%, #529e49 74%); overflow:hidden;">
     
-    <div class="box">
+<div class="box">
         <div class="center">
             <h1>Login</h1>
-
             <?php if (session()->has('error')) : ?>
                 <p><?= session('error') ?></p>
             <?php endif; ?>
-
             <form action="/login" method="post">
                 <div class="text-field">
                     <input type="text" name="username" id="username" required>

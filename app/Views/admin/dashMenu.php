@@ -4,7 +4,7 @@
 
 <body style="background: #1d232b;">
 
-    <section id="content">
+<section id="content">
         <div class="top-pesan">
             <p>Menu</p>
         </div>
@@ -23,7 +23,7 @@
                         <th scope="col">Stok</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Action</th>
-                    </tr>
+  
                 </thead>
                 <tbody>
                     <?php foreach ($menus as $menu) : ?>
@@ -39,6 +39,7 @@
                             <td><?= $menu['kategori']; ?></td>
                             <td>
                                 <!-- Tambahkan aksi untuk setiap data menu -->
+
                                 <a href="/editMenu<?= $menu['id']; ?>" class="btn-edit">Edit</a>
                                 <a href="/deleteMenu/<?= $menu['id']; ?>" class="btn-delete">Delete</a>
                             </td>
@@ -47,8 +48,8 @@
                 </tbody>
             </table>
         </div>
-
     </section>
+
 
 </body>
 <?= $this->endSection(); ?>

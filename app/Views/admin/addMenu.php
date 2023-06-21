@@ -61,24 +61,19 @@
             </form>
         </div>
     </div>
-
     <script>
         function incrementStok() {
             const stokInput = document.getElementById('stok');
             const stokValue = parseInt(stokInput.value);
-
             if (!isNaN(stokValue)) {
                 stokInput.value = stokValue + 1;
             } else {
                 stokInput.value = 1;
             }
         }
-
-
         function decrementStok() {
             const stokInput = document.getElementById('stok');
             const stokValue = parseInt(stokInput.value);
-
             if (!isNaN(stokValue) && stokValue > 0) {
                 stokInput.value = stokValue - 1;
             }

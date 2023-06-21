@@ -4,8 +4,7 @@
 
 <body style="background: #1d232b;">
 
-  <section id="userHome">
-
+<section id="userHome">
     <div class="row noTable">
       <div class="col textTable">
         <h5>No. Meja</h5>
@@ -14,7 +13,6 @@
         <p>Table 01</p>
       </div>
     </div>
-
     <div class="row payTable ">
       <table class="table table-striped table-hover table-bayar ">
         <thead>
@@ -35,7 +33,6 @@
         </tbody>
       </table>
     </div>
-
     <div class="row user-row totalTable">
       <div class="col">
         <ul>
@@ -48,11 +45,9 @@
         </ul>
       </div>
     </div>
-
     <div class="tombol">
       <a type="submit" class="btn btn-outline-success" href="">Pesan</a>
     </div>
-
   </section>
 
 </body>
