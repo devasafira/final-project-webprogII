@@ -21,6 +21,7 @@
                     <tr>
                         <th scope="col">Id Table</th>
                         <th scope="col">Table Name</th>
+                        <th scope="col">Status</th> <!-- Tambahkan kolom "Status" -->
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -29,6 +30,13 @@
                         <tr>
                             <td><?= $table['id'] ?></td>
                             <td><?= $table['table_number'] ?></td>
+                            <td>
+                                <?php if ($table['status']) : ?>
+                                    Active <!-- Ubah status menjadi "Active" -->
+                                <?php else : ?>
+                                    Dead <!-- Ubah status menjadi "Dead" -->
+                                <?php endif; ?>
+                            </td>
                             <td>
                                 <?php if ($table['status']) : ?>
                                     <a href="/admin/deactivate-table/<?= $table['id'] ?>">Deactivate</a>

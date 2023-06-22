@@ -1,0 +1,1501 @@
+ERROR - 2023-06-22 00:09:30 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 00:09:30 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:09:30\', \'2023-06-22 00:09:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:09:30\', \'2023-06-22 00:09:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:09:30\', \'2023-06-22 00:09:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 00:15:34 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 00:15:34 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:15:34\', \'2023-06-22 00:15:34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:15:34\', \'2023-06-22 00:15:34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 00:15:34\', \'2023-06-22 00:15:34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 01:15:40 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 01:15:40 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:15:40\', \'2023-06-22 01:15:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:15:40\', \'2023-06-22 01:15:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:15:40\', \'2023-06-22 01:15:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 01:52:07 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 01:52:07 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:52:07\', \'2023-06-22 01:52:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:52:07\', \'2023-06-22 01:52:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 01:52:07\', \'2023-06-22 01:52:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:02:05 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:02:05 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:05\', \'2023-06-22 02:02:05\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:05\', \'2023-06-22 02:02:05\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:05\', \'2023-06-22 02:02:05\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:02:23 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:02:23 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:23\', \'2023-06-22 02:02:23\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:23\', \'2023-06-22 02:02:23\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (\'budi\', NULL, \'2023-06-22 02:02:23\', \'2023-06-22 02:02:23\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `created_at`, `updated_at`) VALUES (:nama_pembeli:, :table_number:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:42:52 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:42:52 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:43:01 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:43:01 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:44:21 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:44:21 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:44:39 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:44:39 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:48:14 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:48:14 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:48:21 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:48:21 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:49:17 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:49:17 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 02:54:12 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 02:54:12 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 03:02:48 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 03:02:48 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:03:35 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:03:41 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:12:03 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:12:06 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:31:27 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\User.php(46): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:34:13 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\User.php(46): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 03:34:25 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\User.php(46): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 04:04:07 --> mysqli_sql_exception: Column 'table_number' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 04:04:07 --> Column 'table_number' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (\'budi\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`) VALUES (:nama_pembeli:, :table_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:08:31 --> Cannot redeclare App\Controllers\User::saveTable()
+in APPPATH\Controllers\User.php on line 62.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-06-22 04:22:28 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:45:45 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\User.php(64): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:51:22 --> Call to undefined method App\Models\ModelTable::deactivateTable
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\User.php(64): CodeIgniter\Model->__call('deactivateTable', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:52:50 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\User.php(65): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:53:07 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\User.php(65): CodeIgniter\Model->update([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:55:41 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\ModelTable.php(25): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\User.php(64): App\Models\ModelTable->activateTable('1')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:58:44 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\ModelTable.php(25): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\User.php(64): App\Models\ModelTable->activateTable('2')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 04:59:21 --> Undefined variable $selectedTabe
+in APPPATH\Controllers\User.php on line 64.
+ 1 APPPATH\Controllers\User.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedTabe', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Controllers\\User.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 05:00:41 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 05:02:32 --> Undefined variable $selectedTable
+in APPPATH\Views\user\Ubayar.php on line 13.
+ 1 APPPATH\Views\user\Ubayar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedTable', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->bayarUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:05:38 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(107): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 05:05:38 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 05:05:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 05:05:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 05:05:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(107): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:23:07 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(104): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 05:23:07 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(104): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:25:04 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(104): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 05:25:04 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(104): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:31:46 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 05:31:46 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:32:12 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 05:32:12 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 05:32:13 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 05:32:13 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(97): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 05:59:07 --> Class "App\Models\ModelTable" not found
+in APPPATH\Controllers\User.php on line 63.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:02:42 --> Too few arguments to function App\Models\ModelTable::__construct(), 0 passed in C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php on line 63 and exactly 1 expected
+in APPPATH\Models\ModelTable.php on line 14.
+ 1 APPPATH\Controllers\User.php(63): App\Models\ModelTable->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:05:05 --> Too few arguments to function App\Models\ModelTable::__construct(), 0 passed in C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php on line 63 and exactly 1 expected
+in APPPATH\Models\ModelTable.php on line 14.
+ 1 APPPATH\Controllers\User.php(63): App\Models\ModelTable->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:06:46 --> Class "App\Models\ModelTable" not found
+in APPPATH\Controllers\User.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:09:46 --> Class "App\Models\ModelTable" not found
+in APPPATH\Controllers\User.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:09:47 --> Class "App\Models\ModelTable" not found
+in APPPATH\Controllers\User.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 06:12:15 --> Class "App\Models\ModelTable" not found
+in APPPATH\Controllers\User.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 06:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 06:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 06:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 06:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 06:31:32 --> Call to undefined method App\Models\ModelMenu::getMenuSushi
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\User.php(76): CodeIgniter\Model->__call('getMenuSushi', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->uboard()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 07:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 07:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 07:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 07:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 07:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 07:51:02 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 07:51:02 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'2\', \'2023-06-22 07:51:01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'2\', \'2023-06-22 07:51:01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'2\', \'2023-06-22 07:51:01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 07:52:37 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 07:52:37 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'1\', \'2023-06-22 07:52:37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'1\', \'2023-06-22 07:52:37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, \'1\', \'2023-06-22 07:52:37\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 08:03:37 --> Undefined array key "tavle_number"
+in APPPATH\Views\user\Pilihmeja.php on line 36.
+ 1 APPPATH\Views\user\Pilihmeja.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tavle_number"', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Pilihmeja.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Pilihmeja.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Pilihmeja', [], true)
+ 5 APPPATH\Controllers\User.php(36): view('user/Pilihmeja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->selectTable()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 08:10:27 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\ModelTable.php(25): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\User.php(65): App\Models\ModelTable->activateTable('Table 02')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 08:17:31 --> Undefined variable $tableNumber
+in APPPATH\Views\user\Ubayar.php on line 12.
+ 1 APPPATH\Views\user\Ubayar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tableNumber', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\User.php(108): view('user/Ubayar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 08:45:54 --> mysqli_sql_exception: Table 'susigo.pembayaran' doesn't exist in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(86): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#6 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-06-22 08:45:54 --> Table 'susigo.pembayaran' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pembayaran`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pembayaran`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pembayaran`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pembayaran`', [], false)
+ 5 APPPATH\Controllers\User.php(86): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 08:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 08:59:51 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 08:59:51 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(79): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 08:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 08:59:57 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(79): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 08:59:57 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(79): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:05:29 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 09:05:29 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:05:39 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 09:05:39 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:17:39 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 09:17:39 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:17:44 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 09:17:44 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:22:13 --> mysqli_sql_exception: Unknown column 'table_number' in 'where clause' in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-06-22 09:22:13 --> Unknown column 'table_number' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`
+WHERE `table_number` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `table_number` = :table_number:', [...], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\User.php(81): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 09:33:03 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(82): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 09:33:03 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(82): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 09:33:12 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(82): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 09:33:12 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:33:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(82): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-22 09:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 09:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-22 09:56:11 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(82): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 09:56:11 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:56:11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:56:11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 09:56:11\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(82): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-22 10:00:28 --> Undefined variable $nama_produk
+in APPPATH\Controllers\User.php on line 86.
+ 1 APPPATH\Controllers\User.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_produk', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Controllers\\User.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+ERROR - 2023-06-22 10:01:11 --> mysqli_sql_exception: Column 'nama_pembeli' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(82): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-06-22 10:01:11 --> Column 'nama_pembeli' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 10:01:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 10:01:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (NULL, NULL, \'2023-06-22 10:01:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `tanggal_transaksi`) VALUES (:nama_pembeli:, :table_number:, :tanggal_transaksi:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\User.php(82): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->pembayaran()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')

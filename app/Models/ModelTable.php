@@ -14,8 +14,19 @@ class ModelTable extends Model
     {
         return $this->where('status', 'active')->findAll();
     }
+
     public function getInactiveTables()
     {
         return $this->where('status', 'inactive')->findAll();
+    }
+
+    public function activateTable($tableNumber)
+    {
+        $this->update($tableNumber,['status' => '1'] );
+    }
+
+    public function deactivateTable($tableNumber)
+    {
+        $this->update($tableNumber,['status' => '0']);
     }
 }

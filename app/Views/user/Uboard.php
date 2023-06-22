@@ -145,7 +145,7 @@
                                         <span class="quantity">
                                             <button type="button" class="btn btn-quantity minus-btn" onclick="decrementQuantity(this)"><i class="fas fa-minus"></i></button>
                                             <input type="number" name="quantity" class="quantity-input" min="0" max="<?= $menu['stok']; ?>" value="0">
-                                            <button type="button" class="btn btn-quantity plus-btn" onclick="incrementQuantity(this)"><i class="fas fa-plus"></i></button>
+                                            <button type="button" class="btn btn-quantity plus-btn" onclick="incrementQuantity(this)"><i class=""></i></button>
                                         </span>
                                         <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>

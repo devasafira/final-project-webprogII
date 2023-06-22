@@ -24,7 +24,17 @@
         <div class="center" style="background: #12171b;">
             <h1>Edit Menu</h1>
 
-            <form action="/menuadmin/updatemenu/<?= $menu['id']; ?>" method="POST" enctype="multipart/form-data">
+            <?php if (session()->getFlashdata('errors')) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <?php foreach (session()->getFlashdata('errors') as $error) : ?>
+                            <li><?= $error ?></li>
+                        <?php endforeach ?>
+                    </ul>
+                </div>
+            <?php endif ?>
+
+            <form action="/menuadmin/updatemenu<?= $menu['id']; ?>" method="POST" enctype="multipart/form-data">
                 <div class="text-field">
                     <input type="text" name="nama_produk" id="nama_produk" value="<?= $menu['nama_produk']; ?>"
                         required>

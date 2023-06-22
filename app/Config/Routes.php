@@ -56,15 +56,15 @@ $routes->get('home', 'User::menu');
 $routes->get('/addTable', 'Home::addTable');
 
 // User
-//$routes->get('/home', 'Home::halamanUser');
-$routes->get('/pembayaran', 'Home::bayarUser');
 $routes->get('/menuadmin', 'MenuAdmin::dashboard');
-$routes->get('/addMenu', 'MenuAdmin::addMenu');
 $routes->post('/saveMenu', 'MenuAdmin::saveMenu');
+$routes->get('/addMenu', 'MenuAdmin::addMenu');
+//$routes->get('/home', 'user::halamanUser');
+$routes->get('/pembayaran', 'user::pembayaran');
 //$routes->get('/table', 'Home::table');
 $routes->get('/deleteMenu/(:num)', 'MenuAdmin::deleteMenu/$1');
 $routes->add('/editMenu(:num)', 'MenuAdmin::editMenu/$1');
-$routes->post('menuadmin/updatemenu/(:num)', 'MenuAdmin::updateMenu/$1');
+$routes->post('menuadmin/updatemenu(:num)', 'MenuAdmin::updateMenu/$1');
 $routes->get('/awal', 'Home::table');
 
 $routes->get('/table', 'AdminController::manageTables');
@@ -76,6 +76,8 @@ $routes->get('/admin/deactivate-table/(:num)', 'AdminController::deactivateTable
 
 $routes->get('/pilihmeja', 'User::selectTable');
 $routes->post('/pilihmeja', 'User::placeOrder');
+$routes->get('/pilihmenu', 'User::menu');
+
 
 
 /*

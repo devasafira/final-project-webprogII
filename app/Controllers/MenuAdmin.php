@@ -147,19 +147,19 @@ class MenuAdmin extends BaseController
             'harga' => 'required',
             'stok' => 'required|numeric'
         ];
-
+    
         if (!$this->validate($rules)) {
             // Jika validasi gagal, tampilkan pesan kesalahan
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
-
+    
         // Ambil data dari input form
         $kategori  = $this->request->getPost('kategori');
         $namaProduk = $this->request->getPost('nama_produk');
         $harga = $this->request->getPost('harga');
         $stok = $this->request->getPost('stok');
         $gambar = $this->request->getFile('gambar');
-
+    
         // Cek apakah ada file gambar yang diunggah
         if ($gambar->isValid() && !$gambar->hasMoved()) {
             // Pindahkan file gambar yang diunggah ke folder yang diinginkan
@@ -169,7 +169,7 @@ class MenuAdmin extends BaseController
             $menu = $this->menuModel->find($id);
             $gambar = $menu['gambar'];
         }
-
+    
         // Update data menu ke dalam database
         $data = [
             'kategori' => $kategori,
@@ -178,10 +178,11 @@ class MenuAdmin extends BaseController
             'stok' => $stok,
             'gambar' => $gambar // Simpan nama file gambar ke database
         ];
-
+    
         $this->menuModel->update($id, $data);
-
+    
         // Redirect ke halaman yang sesuai setelah berhasil menyimpan menu
         return redirect()->to('/menuadmin')->with('success', 'Menu berhasil diupdate.');
     }
+    
 }
