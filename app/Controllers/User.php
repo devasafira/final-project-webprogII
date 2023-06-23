@@ -40,6 +40,8 @@ class User extends BaseController
     {
         $tableNumber = $this->request->getPost('table_number');
         $namaPembeli = $this->request->getPost('nama_pembeli');
+        $tableModel = new ModelTable();
+        $tableModel->activateTable($tableNumber);
 
         $session = session();
         $session->set([
@@ -129,7 +131,7 @@ class User extends BaseController
         // Menghapus semua item dari keranjang
         session()->remove('cart');
 
-        return redirect()->to('/ubayar');
+        return redirect()->to('/pilihmenu');
     }
 
     public function checkout()
@@ -144,49 +146,43 @@ class User extends BaseController
     }
     public function processPayment()
     {
-        // Ambil data dari form pembayaran
         $namaPembeli = $this->request->getPost('nama_pembeli');
         $tableNumber = $this->request->getPost('table_number');
-        $metodePembayaran = $this->request->getPost('metode_pembayaran');
-        $jumlahUang = $this->request->getPost('jumlah_uang');
-
-        // Hitung total harga dari session cart
         $cart = session()->get('cart') ?? [];
+
+        // Lakukan proses penyimpanan data ke database
+        $modelPesanan = new ModelPesanan();
         $totalHarga = 0;
-        foreach ($cart as $item) {
-            $totalHarga += $item['harga'] * $item['jumlah'];
+
+        foreach ($cart as $menuId => $item) {
+            $namaProduk = $item['nama_produk'];
+            $harga = $item['harga'];
+            $jumlah = $item['jumlah'];
+
+            $menuModel = new ModelMenu();
+            $menu = $menuModel->find($menuId);
+            $newStock = $menu['stok'] - $jumlah;
+            $menuModel->update($menuId, ['stok' => $newStock]);
+            // Hitung total harga
+            $totalHarga += $harga * $jumlah;
+
+            // Simpan data pesanan ke database
+            $modelPesanan->insert([
+                'nama_pembeli' => $namaPembeli,
+                'table_number' => $tableNumber,
+                'nama_produk' => $namaProduk,
+                'harga' => $harga,
+                'jumlah' => $jumlah
+            ]);
         }
 
-        // Simpan data invoice ke database
-        $modelPesanan = new ModelPesanan();
-        $data = [
-            'nama_pembeli' => $namaPembeli,
-            'table_number' => $tableNumber,
-            'metode_pembayaran' => $metodePembayaran,
-            'jumlah_uang' => $jumlahUang,
-            'status_pembayaran' => 'Belum Dibayar',
-            'status_pesanan' => 'Belum Selesai',
-            'total_harga' => $totalHarga
-        ];
-        $modelPesanan->createInvoice($data);
+        // Simpan total harga ke database
+        // ...
 
-        // Cetak struk sebagai PDF
-        $data['invoice'] = $data; // Kirim data invoice ke view invoice.php
-        $html = view('user/invoice', $data);
-        $pdf = new Dompdf();
-        $pdf->loadHtml($html);
-        $pdf->render();
-        $output = $pdf->output();
-        $filename = 'struk.pdf';
-        file_put_contents($filename, $output);
+        // Setelah data disimpan ke database, hapus data keranjang dari session
+        session()->remove('cart');
 
-        return view('user/nvoice');
-    }
-    public function printStruk()
-    {
-        $filename = 'struk.pdf';
-        header('Content-Type: application/pdf');
-        header('Content-Disposition: inline; filename="' . $filename . '"');
-        readfile($filename);
+        // Redirect ke halaman Uboard atau halaman konfirmasi pembayaran
+        return redirect()->to('/uboard');
     }
 }

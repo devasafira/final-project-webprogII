@@ -47,11 +47,13 @@
             </div>
         </div>
         <form action="/ubayar" method="post">
-            
+
             <input type="hidden" name="nama_pembeli" value="<?= session('nama_pembeli') ?>">
             <input type="hidden" name="table_number" value="<?= session('table_number') ?>">
             <button type="submit" class="btn btn-success">Pesan</button>
+            <!-- Tombol Cancel -->
         </form>
+        <a href="/cancelOrder" class="btn btn-danger">Cancel</a>
         </div>
     </section>
 </body>

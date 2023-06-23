@@ -85,8 +85,9 @@ $routes->get('/uboard', 'User::ubayar');
 $routes->get('/user/removeFromCart/(:num)', 'User::removeFromCart/$1');
 $routes->get('/user/clearCart', 'User::clearCart');
 $routes->post('/ubayar', 'User::processPayment');
-$routes->get('/viewInvoice', 'User/viewInvoice');
-$routes->get('/printStruk', 'User/printStruk');
+$routes->get('/viewInvoice', 'User::viewInvoice');
+$routes->get('/printStruk', 'User::printStruk');
+$routes->get('/cancelOrder', 'User::clearCart');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
