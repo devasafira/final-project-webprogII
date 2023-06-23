@@ -9,11 +9,11 @@
                 <h5>No. Meja</h5>
             </div>
             <div class="col textTable">
-                <p><?= $table_number ?></p>
+                <p><?= session('table_number') ?></p>
             </div>
         </div>
-        <div class="row payTable ">
-            <table class="table table-striped table-hover table-bayar ">
+        <div class="row payTable">
+            <table class="table table-striped table-hover table-bayar">
                 <thead>
                     <tr>
                         <th>Gambar</th>
@@ -46,14 +46,14 @@
                 </ul>
             </div>
         </div>
-        <div class="tombol">
-            <form action="/pembayaran" method="post">
-                <input type="hidden" name="nama_pembeli" value="<?= $nama_pembeli ?>">
-                <input type="hidden" name="table_number" value="<?= $tableNumber ?>">
-                <button type="submit" class="btn btn-outline-success">Pesan</button>
-            </form>
+        <form action="/ubayar" method="post">
+            
+            <input type="hidden" name="nama_pembeli" value="<?= session('nama_pembeli') ?>">
+            <input type="hidden" name="table_number" value="<?= session('table_number') ?>">
+            <button type="submit" class="btn btn-success">Pesan</button>
+        </form>
         </div>
     </section>
 </body>
 
-<?= $this->endSection('user-content'); ?>
+<?= $this->endSection('user-content'); ?>php s

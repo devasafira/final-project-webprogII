@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\ModelMenu;
 use App\Models\ModelTable;
-use App\Models\ModelPesanan; // Tambahkan model ModelPesanan
+use App\Models\ModelPesanan;
 
 class User extends BaseController
 {
@@ -24,10 +24,10 @@ class User extends BaseController
     public function selectTable()
     {
         $tableModel = new ModelTable();
-    
+
         // Get inactive tables
         $inactiveTables = $tableModel->where('status', 'inactive')->findAll();
-    
+
         if (empty($inactiveTables)) {
             $data['message'] = 'Meja Penuh'; // Set message when no inactive tables available
         } else {
@@ -35,58 +35,158 @@ class User extends BaseController
         }
         return view('user/Pilihmeja', $data);
     }
-    
-    // public function saveTable()
-    // {
-    //     $selectedTable = $this->request->getPost('table');
-    
-    //     if (!empty($selectedTable)) {
-    //         $tableModel = new ModelTable();
-    //         $tableModel->deactivateTable($selectedTable); // Menonaktifkan meja yang dipilih
-    
-    //         // Update selected table status to active
-    //         $tableModel->update(['status' => '1'], ['id' => $selectedTable]);
-    
-    //         return redirect()->to('/user');
-    //     } else {
-    //         return redirect()->back()->with('error', 'Please select a table.');
-    //     }
-    // }
-    
 
     public function placeOrder()
     {
-        $selectedTable = $this->request->getPost('table_number');
-        $nama_pembeli = $this->request->getPost('nama_pembeli');
-        $tanggal_transaksi = date('Y-m-d H:i:s');
-    
-        // Update selected table status to inactive
-        $tableModel = new ModelTable();
-        $tableModel->activateTable($selectedTable);
-    
-        // Save selected table and customer name to session
-        session()->set('selectedTable', $selectedTable);
-        session()->set('nama_pembeli', $nama_pembeli);
+        $tableNumber = $this->request->getPost('table_number');
+        $namaPembeli = $this->request->getPost('nama_pembeli');
+
+        $session = session();
+        $session->set([
+            'nama_pembeli' => $namaPembeli,
+            'table_number' => $tableNumber
+        ]);
         return redirect()->to('/pilihmenu');
     }
-    public function pembayaran()
+
+
+    public function AddselecteMenu()
     {
-        $modelPesanan = new ModelPesanan();
-    
-        // Mendapatkan data pesanan dari form
-        $nama_pembeli = $this->request->getPost('nama_pembeli');
-        $table_number = $this->request->getPost('table_number');
-        $tanggal_transaksi = date('Y-m-d H:i:s');
-    
-        // Memasukkan data pesanan ke dalam database
-        $modelPesanan->insert([
-            'nama_pembeli' => $nama_pembeli,
-            'table_number' => $table_number,
-            'tanggal_transaksi' => $tanggal_transaksi,y
-        ]);
-        
-    
-        return view('user/Ubayar');
+        $session = session();
+        $namaPembeli = $session->get('nama_pembeli');
+        $tableNumber = $session->get('table_number');
+        $menuModel = new ModelMenu();
+        $menuId = $this->request->getPost('id');
+        $quantity = $this->request->getPost('quantity');
+
+        // Mengambil data menu berdasarkan ID
+        $menu = $menuModel->find($menuId);
+
+        // Simpan data menu dan quantity ke dalam session keranjang
+        $cart = session()->get('cart') ?? [];
+
+        if (isset($cart[$menuId])) {
+            // Jika menu sudah ada dalam keranjang, tambahkan quantity
+            $cart[$menuId]['jumlah'] += $quantity;
+        } else {
+            // Jika menu belum ada dalam keranjang, tambahkan data baru
+            $cart[$menuId] = [
+                'gambar' => $menu['gambar'],
+                'nama_produk' => $menu['nama_produk'],
+                'harga' => $menu['harga'],
+                'jumlah' => $quantity,
+            ];
+        }
+
+        // Simpan kembali session keranjang
+        session()->set('cart', $cart);
+        return redirect()->to('/uboard');
     }
-    
+
+    public function uboard()
+    {
+        $menuModel = new ModelMenu();
+
+        // Mengambil data menu dari database
+        $sushiMenus = $menuModel->findAll();
+
+        // Menampilkan halaman Uboard.php dengan data menu
+        return view('user/Uboard', ['sushiMenus' => $sushiMenus]);
+    }
+
+    public function ubayar()
+    {
+        // Mendapatkan data keranjang dari session
+        $cart = session()->get('cart') ?? [];
+
+        // Menghitung total harga
+        $totalHarga = 0;
+        foreach ($cart as $item) {
+            $totalHarga += $item['harga'] * $item['jumlah'];
+        }
+
+        // Menampilkan halaman Ubayar.php dengan data keranjang dan total harga
+        return view('user/Ubayar', ['orderItems' => $cart, 'totalHarga' => $totalHarga]);
+    }
+
+    public function removeFromCart($menuId)
+    {
+        // Menghapus item menu dari keranjang
+        $cart = session()->get('cart') ?? [];
+
+        if (isset($cart[$menuId])) {
+            unset($cart[$menuId]);
+        }
+
+        // Simpan kembali session keranjang
+        session()->set('cart', $cart);
+
+        return redirect()->to('/ubayar');
+    }
+
+    public function clearCart()
+    {
+        // Menghapus semua item dari keranjang
+        session()->remove('cart');
+
+        return redirect()->to('/ubayar');
+    }
+
+    public function checkout()
+    {
+        // Melakukan proses checkout
+        // ...
+
+        // Setelah proses checkout selesai, hapus data keranjang dari session
+        session()->remove('cart');
+
+        return redirect()->to('/uboard');
+    }
+    public function processPayment()
+    {
+        // Ambil data dari form pembayaran
+        $namaPembeli = $this->request->getPost('nama_pembeli');
+        $tableNumber = $this->request->getPost('table_number');
+        $metodePembayaran = $this->request->getPost('metode_pembayaran');
+        $jumlahUang = $this->request->getPost('jumlah_uang');
+
+        // Hitung total harga dari session cart
+        $cart = session()->get('cart') ?? [];
+        $totalHarga = 0;
+        foreach ($cart as $item) {
+            $totalHarga += $item['harga'] * $item['jumlah'];
+        }
+
+        // Simpan data invoice ke database
+        $modelPesanan = new ModelPesanan();
+        $data = [
+            'nama_pembeli' => $namaPembeli,
+            'table_number' => $tableNumber,
+            'metode_pembayaran' => $metodePembayaran,
+            'jumlah_uang' => $jumlahUang,
+            'status_pembayaran' => 'Belum Dibayar',
+            'status_pesanan' => 'Belum Selesai',
+            'total_harga' => $totalHarga
+        ];
+        $modelPesanan->createInvoice($data);
+
+        // Cetak struk sebagai PDF
+        $data['invoice'] = $data; // Kirim data invoice ke view invoice.php
+        $html = view('user/invoice', $data);
+        $pdf = new Dompdf();
+        $pdf->loadHtml($html);
+        $pdf->render();
+        $output = $pdf->output();
+        $filename = 'struk.pdf';
+        file_put_contents($filename, $output);
+
+        return view('user/nvoice');
+    }
+    public function printStruk()
+    {
+        $filename = 'struk.pdf';
+        header('Content-Type: application/pdf');
+        header('Content-Disposition: inline; filename="' . $filename . '"');
+        readfile($filename);
+    }
 }

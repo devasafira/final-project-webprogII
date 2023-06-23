@@ -14,5 +14,15 @@ class ModelPesanan extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_pembeli', 'table_number', 'tanggal_transaksi' , 'nama_produk', 'jumlah', 'harga','total'];
+    protected $allowedFields    = ['nama_pembeli', 'table_number', 'tanggal_transaksi', 'nama_produk', 'jumlah', 'harga', 'total','metode_pembayaran','pembayaran_diterima','status'];
+
+    // Tambahkan metode untuk mengambil pesanan berdasarkan nomor meja
+    public function getOrderItemsByTable($tableNumber)
+    {
+        return $this->where('table_number', $tableNumber)->findAll();
+    }
+    public function createInvoice($data)
+    {
+        return $this->insert($data);
+    }
 }

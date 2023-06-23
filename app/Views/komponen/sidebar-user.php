@@ -29,7 +29,7 @@
             </li>
             <br>
             <li>
-                <a href="/pembayaran" class="side-link-user">
+                <a href="/uboard" class="side-link-user">
                     <i class='bx bx-food-menu menu-link' data-bs-toggle="tooltip" data-bs-placement="right" title="Menu" ></i>
                 </a>
             </li>

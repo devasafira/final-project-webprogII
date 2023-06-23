@@ -76,10 +76,17 @@ $routes->get('/admin/deactivate-table/(:num)', 'AdminController::deactivateTable
 
 $routes->get('/pilihmeja', 'User::selectTable');
 $routes->post('/pilihmeja', 'User::placeOrder');
+
 $routes->get('/pilihmenu', 'User::menu');
-
-
-
+$routes->post('/uboard', 'User::AddselecteMenu');
+$routes->get('/pembayaran', 'User::uboard');
+$routes->get('/uboard', 'User::ubayar');
+//$routes->post('/user/addToCart', 'User::pembayaran1');
+$routes->get('/user/removeFromCart/(:num)', 'User::removeFromCart/$1');
+$routes->get('/user/clearCart', 'User::clearCart');
+$routes->post('/ubayar', 'User::processPayment');
+$routes->get('/viewInvoice', 'User/viewInvoice');
+$routes->get('/printStruk', 'User/printStruk');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

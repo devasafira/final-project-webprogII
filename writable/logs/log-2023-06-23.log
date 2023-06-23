@@ -1,0 +1,195 @@
+CRITICAL - 2023-06-23 00:32:10 --> Unmatched '}'
+in APPPATH\Controllers\User.php on line 85.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Controllers\\User.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-23 00:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 01:09:33 --> Undefined property: Config\Session::$savePath
+in SYSTEMPATH\Session\Handlers\BaseHandler.php on line 117.
+ 1 SYSTEMPATH\Session\Handlers\BaseHandler.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Session::$savePath', 'C:\\xampp\\htdocs\\final-project-webprogII\\system\\Session\\Handlers\\BaseHandler.php', 117)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(68): CodeIgniter\Session\Handlers\BaseHandler->__construct(Object(Config\App), '::1')
+ 3 SYSTEMPATH\Config\Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(988): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\User.php(44): session()
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-23 01:10:08 --> Undefined property: Config\Session::$savePath
+in SYSTEMPATH\Session\Handlers\BaseHandler.php on line 117.
+ 1 SYSTEMPATH\Session\Handlers\BaseHandler.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Session::$savePath', 'C:\\xampp\\htdocs\\final-project-webprogII\\system\\Session\\Handlers\\BaseHandler.php', 117)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(68): CodeIgniter\Session\Handlers\BaseHandler->__construct(Object(Config\App), '::1')
+ 3 SYSTEMPATH\Config\Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(988): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\User.php(44): session()
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-23 01:10:13 --> Undefined property: Config\Session::$savePath
+in SYSTEMPATH\Session\Handlers\BaseHandler.php on line 117.
+ 1 SYSTEMPATH\Session\Handlers\BaseHandler.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Session::$savePath', 'C:\\xampp\\htdocs\\final-project-webprogII\\system\\Session\\Handlers\\BaseHandler.php', 117)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(68): CodeIgniter\Session\Handlers\BaseHandler->__construct(Object(Config\App), '::1')
+ 3 SYSTEMPATH\Config\Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(988): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\User.php(44): session()
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+CRITICAL - 2023-06-23 01:10:30 --> Undefined property: Config\Session::$savePath
+in SYSTEMPATH\Session\Handlers\BaseHandler.php on line 117.
+ 1 SYSTEMPATH\Session\Handlers\BaseHandler.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Session::$savePath', 'C:\\xampp\\htdocs\\final-project-webprogII\\system\\Session\\Handlers\\BaseHandler.php', 117)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(68): CodeIgniter\Session\Handlers\BaseHandler->__construct(Object(Config\App), '::1')
+ 3 SYSTEMPATH\Config\Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(988): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\User.php(44): session()
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->placeOrder()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-23 01:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 01:16:36 --> Undefined variable $totalHarga
+in APPPATH\Views\user\Ubayar.php on line 45.
+ 1 APPPATH\Views\user\Ubayar.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalHarga', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\User.php(103): view('user/Ubayar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->ubayar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-23 01:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 01:19:01 --> Undefined variable $menu
+in APPPATH\Views\user\Ubayar.php on line 52.
+ 1 APPPATH\Views\user\Ubayar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\final-project-webprogII\\app\\Views\\user\\Ubayar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('user/Ubayar', [], true)
+ 5 APPPATH\Controllers\User.php(109): view('user/Ubayar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->ubayar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-23 01:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 01:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 03:24:15 --> mysqli_sql_exception: Column 'metode_pembayaran' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Models\ModelPesanan.php(26): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(171): App\Models\ModelPesanan->createInvoice(Array)
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->processPayment()
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-06-23 03:24:15 --> Column 'metode_pembayaran' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (:nama_pembeli:, :table_number:, :metode_pembayaran:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ModelPesanan.php(26): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\User.php(171): App\Models\ModelPesanan->createInvoice([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->processPayment()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')
+INFO - 2023-06-23 03:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 03:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-23 03:29:15 --> mysqli_sql_exception: Column 'metode_pembayaran' cannot be null in C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\final-project-webprogII\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\final-project-webprogII\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\final-project-webprogII\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\final-project-webprogII\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\final-project-webprogII\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\final-project-webprogII\app\Models\ModelPesanan.php(26): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\final-project-webprogII\app\Controllers\User.php(171): App\Models\ModelPesanan->createInvoice(Array)
+#9 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(934): App\Controllers\User->processPayment()
+#10 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#11 C:\xampp\htdocs\final-project-webprogII\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\final-project-webprogII\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\final-project-webprogII\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-06-23 03:29:15 --> Column 'metode_pembayaran' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (\'ayubayu\', \'1\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesanan` (`nama_pembeli`, `table_number`, `metode_pembayaran`) VALUES (:nama_pembeli:, :table_number:, :metode_pembayaran:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\ModelPesanan.php(26): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\User.php(171): App\Models\ModelPesanan->createInvoice([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->processPayment()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\final-project-webprogII\\public\\index.php')

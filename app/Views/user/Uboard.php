@@ -13,12 +13,14 @@
         body {
             background: #1d232b;
         }
+
         .menu-image {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 5px;
         }
+
         #userHomeDashboard {
             margin-left: 100px;
             color: white;
@@ -141,121 +143,123 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
                                         <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                        <form action="/uboard" method="post">
+                                            <input type="hidden" name="id" value="<?= $menu['id']; ?>">
+                                            <div class="input-group mb-3">
+                                                <button class="btn btn-success" type="submit" name="submit">Pesan</button>
+                                                <input type="number" class="form-control" name="quantity" min="0" max="<?= $menu['stok']; ?>">
+                                            </div>
+                                        </form>
+                                        <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
+                                        <span class="badge bg-info text-dark"><?= $menu['harga']; ?> harga</span>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <?php if (!empty($sashimiMenus)) : ?>
+            <section id="sashimi" class="menu-section">
+                <div class="container">
+                    <div class="title-box">
+                        <h4>Sashimi</h4>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($sashimiMenus as $menu) : ?>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                        <p class="card-text"><?= $menu['keterangan']; ?></p>
                                         <a href="#" class="btn btn-success">Pesan</a>
-                                        <span class="quantity">
-                                            <button type="button" class="btn btn-quantity minus-btn" onclick="decrementQuantity(this)"><i class="fas fa-minus"></i></button>
-                                            <input type="number" name="quantity" class="quantity-input" min="0" max="<?= $menu['stok']; ?>" value="0">
-                                            <button type="button" class="btn btn-quantity plus-btn" onclick="incrementQuantity(this)"><i class=""></i></button>
-                                        </span>
                                         <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                        </div>
                     </div>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
 
-            <?php if (!empty($sashimiMenus)) : ?>
-                <section id="sashimi" class="menu-section">
-                    <div class="container">
-                        <div class="title-box">
-                            <h4>Sashimi</h4>
-                        </div>
-                        <div class="row">
-                            <?php foreach ($sashimiMenus as $menu) : ?>
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
-                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
-                                            <a href="#" class="btn btn-success">Pesan</a>
-                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
-                                        </div>
+        <?php if (!empty($chinmiMenus)) : ?>
+            <section id="chinmi" class="menu-section">
+                <div class="container">
+                    <div class="title-box">
+                        <h4>Chinmi</h4>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($chinmiMenus as $menu) : ?>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                        <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                        <a href="#" class="btn btn-success">Pesan</a>
+                                        <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
 
-            <?php if (!empty($chinmiMenus)) : ?>
-                <section id="chinmi" class="menu-section">
-                    <div class="container">
-                        <div class="title-box">
-                            <h4>Chinmi</h4>
-                        </div>
-                        <div class="row">
-                            <?php foreach ($chinmiMenus as $menu) : ?>
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
-                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
-                                            <a href="#" class="btn btn-success">Pesan</a>
-                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
-                                        </div>
+        <?php if (!empty($udonMenus)) : ?>
+            <section id="udon" class="menu-section">
+                <div class="container">
+                    <div class="title-box">
+                        <h4>Udon</h4>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($udonMenus as $menu) : ?>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                        <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                        <a href="#" class="btn btn-success">Pesan</a>
+                                        <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
 
-            <?php if (!empty($udonMenus)) : ?>
-                <section id="udon" class="menu-section">
-                    <div class="container">
-                        <div class="title-box">
-                            <h4>Udon</h4>
-                        </div>
-                        <div class="row">
-                            <?php foreach ($udonMenus as $menu) : ?>
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
-                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
-                                            <a href="#" class="btn btn-success">Pesan</a>
-                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
-                                        </div>
+        <?php if (!empty($drinksMenus)) : ?>
+            <section id="drinks" class="menu-section">
+                <div class="container">
+                    <div class="title-box">
+                        <h4>Drinks</h4>
+                    </div>
+                    <div class="row">
+                        <?php foreach ($drinksMenus as $menu) : ?>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
+                                        <p class="card-text"><?= $menu['keterangan']; ?></p>
+                                        <a href="#" class="btn btn-success">Pesan</a>
+                                        <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </section>
-            <?php endif; ?>
-
-            <?php if (!empty($drinksMenus)) : ?>
-                <section id="drinks" class="menu-section">
-                    <div class="container">
-                        <div class="title-box">
-                            <h4>Drinks</h4>
-                        </div>
-                        <div class="row">
-                            <?php foreach ($drinksMenus as $menu) : ?>
-                                <div class="col">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="uploads/<?= $menu['gambar']; ?>" class="card-img-top" alt="Menu Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?= $menu['nama_produk']; ?></h5>
-                                            <p class="card-text"><?= $menu['keterangan']; ?></p>
-                                            <a href="#" class="btn btn-success">Pesan</a>
-                                            <span class="badge bg-info text-dark"><?= $menu['stok']; ?> tersisa</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -283,3 +287,21 @@
 </body>
 
 <?= $this->endSection('user-content'); ?>
+
+
+
+
+
+
+// Mendapatkan data pesanan dari database berdasarkan nama_pembeli dan table_number
+    $nama_pembeli = session()->get('nama_pembeli');
+    $table_number = session()->get('selectedTable');
+    $orderItems = $modelPesanan->where('nama_pembeli', $nama_pembeli)->where('table_number', $table_number)->findAll();
+    $totalHarga = array_sum(array_column($orderItems, 'total'));
+
+    return view('user/Ubayar', [
+        'nama_pembeli' => $nama_pembeli,
+        'table_number' => $table_number,
+        'orderItems' => $orderItems,
+        'totalHarga' => $totalHarga,
+    ]);
